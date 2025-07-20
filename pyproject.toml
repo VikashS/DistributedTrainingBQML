@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fraud"
+version = "0.1.0"
+description = "Fraud Detection Pipeline for Vertex AI"
+authors = [{name = "Vikash Singh", email = "vikash.singh@linuxmail.org"}]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.dependencies]
+google-cloud-aiplatform = ">=1.25.0"
+scikit-learn = ">=1.2.0"
+pandas = ">=2.0.0"
+pyyaml = ">=6.0"
+joblib = ">=1.2.0"
+xgboost = ">=1.7.0"
+lightgbm = ">=3.3.0"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.3.0", "black>=23.3.0"]
+
+[tool.setuptools]
+packages = ["fraud"]
+package-dir = {"" = "src"}
